@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+int main() {
+
+    int idade, opcao;
+    float altura;
+    char inicial;
+    char nome[60];
+
+    printf("Digite seu nome: ");
+    scanf("%59s", nome);
+
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+
+    printf("Digite sua altura: ");
+    scanf("%f", &altura);
+
+    printf("Digite a inicial do seu nome: ");
+    scanf(" %c", &inicial);
+
+    if (idade >= 18) {
+        printf("\nVoce e maior de idade.\n");
+    } else {
+        printf("\nVoce e menor de idade.\n");
+    }
+
+    printf("\nEscolha uma opcao:\n");
+    printf("1 - Mostrar nome\n");
+    printf("2 - Mostrar idade\n");
+    printf("3 - Mostrar altura\n");
+    printf("Digite a opcao: ");
+    scanf("%d", &opcao);
+
+    switch (opcao) {
+
+        case 1:
+            printf("Seu nome e: %s\n", nome);
+            break;
+
+        case 2:
+            printf("Sua idade e: %d anos\n", idade);
+            break;
+
+        case 3:
+            printf("Sua altura e: %.2f metros\n", altura);
+            break;
+
+        default:
+            printf("Opcao invalida!\n");
+    }
+
+    return 0;
+}
